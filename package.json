@@ -1,0 +1,19 @@
+{
+  "name": "direcly-node",
+  "version": "1.0.0",
+  "description": "Application Challenge for Direcly inc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonCor96/direcly-node.git"
+  },
+  "author": "Brandon Cortes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonCor96/direcly-node/issues"
+  },
+  "homepage": "https://github.com/brandonCor96/direcly-node#readme"
+}
