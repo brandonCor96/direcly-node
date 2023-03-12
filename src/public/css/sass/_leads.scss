@@ -1,0 +1,18 @@
+.leads-page {
+    table {
+        margin: 0 auto;
+        text-align: center;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 1256px;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }    
+}

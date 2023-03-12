@@ -1,8 +1,8 @@
 const { v4: uuid } = require("uuid");
-const Student = require("../db/Student");
+const student = require("../db/Student");
 
 const getAllStudents = () => {
-    const allStudents = Student.getAllStudents();
+    const allStudents = student.getAllStudents();
     return allStudents;
 };
 const getOneStudent = () => {
@@ -15,7 +15,7 @@ const createNewStudent = (newStudent) => {
         created: new Date().toLocaleString("en-US", { timezone: "UTC" }),
     }
 
-    const createdStudent = Student.createNewStudent(studentToInsert);
+    const createdStudent = student.createNewStudent(studentToInsert);
     
     return createdStudent;
 };
