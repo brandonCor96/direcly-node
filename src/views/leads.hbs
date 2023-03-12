@@ -1,7 +1,7 @@
 <div class="leads-page">
-  <table id="leadsTable">
+    <table id="leadsTable">
     <thead>
-      <tr>
+        <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Last Name</th>
@@ -13,41 +13,83 @@
         <th>Phone</th>
         <th>Email</th>
         <th>Created</th>
-      </tr>
+        </tr>
     </thead>
     <tbody>
     </tbody>
-  </table>
+    </table>
 </div>
 
 <script type="text/javascript">
 
-  let tableBody = document.querySelector('#leadsTable tbody');
-  fetch('/api/v1/students', { method: 'GET' }) .then(res => res.json())
-  .then(data => { data.data.map(student => { let row =
-  document.createElement('tr'); //Values //Create Id cell const idCell =
-  document.createElement('td'); idCell.textContent = student.id;
-  row.appendChild(idCell); //Create Name cell const nameCell =
-  document.createElement('td'); nameCell.textContent = student.name;
-  row.appendChild(nameCell); //Create Last Name cell const lastNameCell =
-  document.createElement('td'); lastNameCell.textContent = student.lastname;
-  row.appendChild(lastNameCell); //Create Age cell const ageCell =
-  document.createElement('td'); ageCell.textContent = student.age;
-  row.appendChild(ageCell); //Create Genre cell const genreCell =
-  document.createElement('td'); genreCell.textContent = student.genre;
-  row.appendChild(genreCell); //Create City cell const cityCell =
-  document.createElement('td'); cityCell.textContent = student.city;
-  row.appendChild(cityCell); //Create Country cell const countryCell =
-  document.createElement('td'); countryCell.textContent = student.country;
-  row.appendChild(countryCell); //Create Courses cell const coursesCell =
-  document.createElement('td'); coursesCell.textContent = student.courses;
-  row.appendChild(coursesCell); //Create Phone cell const phoneCell =
-  document.createElement('td'); phoneCell.textContent = student.phone;
-  row.appendChild(phoneCell); //Create Email cell const mailCell =
-  document.createElement('td'); mailCell.textContent = student.mail;
-  row.appendChild(mailCell); //Create Date cell const dateCell =
-  document.createElement('td'); dateCell.textContent = student.created;
-  row.appendChild(dateCell); // Add the row to the table body
-  tableBody.appendChild(row); }) })
+    let tableBody = document.querySelector('#leadsTable tbody');
+    fetch('/api/v1/students', {
+        method: 'GET'
+    })
+    .then(res => res.json())
+    .then(data => {
+        data.data.map(student => {
+            let row = document.createElement('tr');
+
+            //Values
+            //Create Id cell
+            const idCell = document.createElement('td');
+            idCell.textContent = student.id;
+            row.appendChild(idCell);
+
+            //Create Name cell
+            const nameCell = document.createElement('td');
+            nameCell.textContent = student.name;
+            row.appendChild(nameCell);
+
+            //Create Last Name cell
+            const lastNameCell = document.createElement('td');
+            lastNameCell.textContent = student.lastname;
+            row.appendChild(lastNameCell);            
+
+            //Create Age cell
+            const ageCell = document.createElement('td');
+            ageCell.textContent = student.age;
+            row.appendChild(ageCell);
+
+            //Create Genre cell
+            const genreCell = document.createElement('td');
+            genreCell.textContent = student.genre;
+            row.appendChild(genreCell); 
+
+            //Create City cell
+            const cityCell = document.createElement('td');
+            cityCell.textContent = student.city;
+            row.appendChild(cityCell);
+
+            //Create Country cell
+            const countryCell = document.createElement('td');
+            countryCell.textContent = student.country;
+            row.appendChild(countryCell);
+
+            //Create Courses cell
+            const coursesCell = document.createElement('td');
+            coursesCell.textContent = student.courses;
+            row.appendChild(coursesCell);
+
+            //Create Phone cell
+            const phoneCell = document.createElement('td');
+            phoneCell.textContent = student.phone;
+            row.appendChild(phoneCell);
+
+            //Create Email cell
+            const mailCell = document.createElement('td');
+            mailCell.textContent = student.mail;
+            row.appendChild(mailCell);                                                  
+
+            //Create Date cell
+            const dateCell = document.createElement('td');
+            dateCell.textContent = student.created;
+            row.appendChild(dateCell);   
+
+            // Add the row to the table body
+            tableBody.appendChild(row);
+        })
+    })
 
 </script>

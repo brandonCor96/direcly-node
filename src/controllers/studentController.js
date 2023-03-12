@@ -23,21 +23,21 @@ const createNewStudent = (req, res) => {
     });
   }
 
-  const newStudent = {
-    id: body.id,
-    name: body.name,
-    lastname: body.lastname,
-    mail: body.mail,
-    age: body.age,
-    genre: body.genre,
-    city: body.city,
-    country: body.country,
-    courses: body.courses,
-    phone: body.phone,
-  };
+  const  {
+    id,
+    name,
+    lastname,
+    mail,
+    age,
+    genre,
+    city,
+    country,
+    courses,
+    phone,
+  } = body;
 
   try {
-    const createdStudent = studentService.createNewStudent(newStudent);
+    const createdStudent = studentService.createNewStudent({id, name, lastname, mail, age, genre, city, country, courses, phone});
     res.status(201).send({ status: "OK", data: createdStudent });
   } catch (error) {
     res

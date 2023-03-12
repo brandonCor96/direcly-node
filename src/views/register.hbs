@@ -1,101 +1,69 @@
 <form id="register" class="form-register" method="post">
-  <input
-    class="field-input"
-    type="text"
-    name="name"
-    value=""
-    placeholder="Your name"
-    required
-  />
-  <br /><br />
-  <input
-    class="field-input"
-    type="text"
-    name="lastname"
-    value=""
-    placeholder="Your Last name"
-    required
-  />
-  <br /><br />
-  <input
-    class="field-input"
-    type="text"
-    name="id"
-    value=""
-    placeholder="Your ID"
-    required
-  />
-  <br /><br />
-  <input
-    class="field-input"
-    type="number"
-    name="age"
-    id="age"
-    min="1"
-    max="120"
-    step="1"
-    placeholder="Your age"
-    required
-  />
-  <br /><br />
-  <label for="genre">Choose a Genre:</label>
-  <select id="genre" name="genre" required>
-    <option value="female">Female</option>
-    <option value="male">Male</option>
-  </select>
-  <br /><br />
-  <label for="country">Choose a Country:</label>
-  <select id="country" name="country" required>
-    <option value="CO">Colombia</option>
-    <option value="CR">Costa Rica</option>
-  </select>
-  <br /><br />
-  <label for="city">Choose a City:</label>
-  <br />
-  <select id="city" name="city" required>
-    <option value="bogota">Bogotá</option>
-    <option value="manizales">Manizales</option>
-    <option value="sanjose">San José</option>
-  </select>
-  <br /><br />
-  <input
-    class="field-input"
-    type="email"
-    name="email"
-    value=""
-    placeholder="Your email"
-    required
-  />
-  <br /><br />
-  <input
-    class="field-input"
-    type="tel"
-    id="phone"
-    name="phone"
-    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-    placeholder="Your phone number"
-    required
-  />
-  <br /><br />
-  <label for="courses">Choose some interesting courses:</label>
-  <br />
-  <select id="courses" name="courses" multiple required>
-    <option value="programming">Programming</option>
-    <option value="maths">Maths</option>
-    <option value="physics">Physics</option>
-    <option value="data">Data</option>
-  </select>
-  <br /><br />
-  <input type="submit" value="Register" />
+    <input class="field-input" type="text" name="name" value="" placeholder="Your name" required>
+    <br><br>
+    <input class="field-input" type="text" name="lastname" value="" placeholder="Your Last name" required>
+    <br><br>
+    <input class="field-input" type="text" name="id" value="" placeholder="Your ID" required>
+    <br><br>
+    <input class="field-input" type="number" name="age" id="age" min="1" max="120" step="1" placeholder="Your age" required>
+    <br><br>
+    <label for="genre">Choose a Genre:</label>
+    <select id="genre" name="genre" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+    </select>
+    <br><br>
+    <label for="country">Choose a Country:</label>
+    <select id="country" name="country" required>
+        <option value="CO">Colombia</option>
+        <option value="CR">Costa Rica</option>
+    </select>    
+    <br><br>
+    <label for="city">Choose a City:</label>
+    <br>
+    <select id="city" name="city" required>
+        <option value="bogota">Bogotá</option>
+        <option value="manizales">Manizales</option>
+        <option value="sanjose">San José</option>
+    </select>
+    <br><br>
+    <input class="field-input" type="email" name="email" value="" placeholder="Your email" required>
+    <br><br>
+    <input class="field-input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number" required>
+    <br><br>
+    <label for="courses">Choose some interesting courses:</label>
+    <br>
+    <select id="courses" name="courses" multiple required>
+        <option value="programming">Programming</option>
+        <option value="maths">Maths</option>
+        <option value="physics">Physics</option>
+        <option value="data">Data</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Register">
 </form>
 
 <script type="text/javascript">
-  const formRegister = document.querySelector('#register'); const formData = new
-  FormData(formRegister); formRegister.addEventListener('submit', event => {
-  event.preventDefault(); console.log(formData.get('name'));
-  fetch('/api/v1/students', { method: 'POST', headers: { 'Content-Type':
-  'application/json' }, body: JSON.stringify({ id: formData.id, name:
-  formData.name, lastname: formData.lastname, age: formData.age, age:
-  formData.age, }) }) .then(res => res.json()) .then(data => console.log(data))
-  })
+    const formRegister = document.querySelector('#register');
+    const formData = new FormData(formRegister);
+    
+    formRegister.addEventListener('submit', event => {
+        event.preventDefault();
+        console.log(formData.get('name'));
+        fetch('/api/v1/students', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },            
+            body: JSON.stringify({
+                id: formData.id,
+                name: formData.name,
+                lastname: formData.lastname,
+                age: formData.age,
+                age: formData.age,
+            })
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+    })
 </script>
