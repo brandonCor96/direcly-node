@@ -1,13 +1,11 @@
-<form id="register" method="post">
-    <input type="text" name="name" value="" placeholder="Your name" required>
+<form id="register" class="form-register" method="post">
+    <input class="field-input" type="text" name="name" value="" placeholder="Your name" required>
     <br><br>
-    <input type="text" name="lastname" value="" placeholder="Your Last name" required>
+    <input class="field-input" type="text" name="lastname" value="" placeholder="Your Last name" required>
     <br><br>
-    <input type="text" name="id" value="" placeholder="Your ID" required>
+    <input class="field-input" type="text" name="id" value="" placeholder="Your ID" required>
     <br><br>
-    <label for="age">Your Age:</label>
-    <br>
-    <input type="number" name="age" id="age" min="1" max="120" step="1" required>
+    <input class="field-input" type="number" name="age" id="age" min="1" max="120" step="1" placeholder="Your age" required>
     <br><br>
     <label for="genre">Choose a Genre:</label>
     <select id="genre" name="genre" required>
@@ -29,9 +27,9 @@
         <option value="sanjose">San José</option>
     </select>
     <br><br>
-    <input type="email" name="email" value="" placeholder="Your email" required>
+    <input class="field-input" type="email" name="email" value="" placeholder="Your email" required>
     <br><br>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number" required>
+    <input class="field-input" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Your phone number" required>
     <br><br>
     <label for="courses">Choose some interesting courses:</label>
     <br>
