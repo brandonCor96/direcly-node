@@ -33,6 +33,60 @@
       "phone": "3190000000",
       "uid": "751f3b74-eeda-407a-9e55-85649ba79ef0",
       "created": "3/11/2023, 4:34:55 PM"
+    },
+    {
+      "uid": "9561f530-70c0-4c5d-ba57-f01aa529c5d3",
+      "created": "3/12/2023, 5:22:51 PM"
+    },
+    {
+      "id": "90099",
+      "name": "Nata",
+      "lastname": "Escudero",
+      "mail": "nata@nata.es",
+      "age": "29",
+      "genre": "female",
+      "city": "sanjose",
+      "country": "CR",
+      "courses": [
+        "physics",
+        "data"
+      ],
+      "phone": "3194380587",
+      "uid": "f00a1371-84b0-4587-8782-41bc5b79e740",
+      "created": "3/12/2023, 6:11:07 PM"
+    },
+    {
+      "id": "11",
+      "name": "asdddasd",
+      "lastname": "asdasd",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "33",
+      "genre": "female",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3194380587",
+      "uid": "12dc1199-f867-478b-9cac-2d8345bcf474",
+      "created": "3/12/2023, 6:15:02 PM"
+    },
+    {
+      "id": "90099",
+      "name": "Natalia",
+      "lastname": "Escudero",
+      "mail": "nata@nata.es",
+      "age": "29",
+      "genre": "female",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "maths",
+        "physics"
+      ],
+      "phone": "3194380587",
+      "uid": "a07fdefd-e158-4e0c-84ba-94340d274b6c",
+      "created": "3/12/2023, 6:21:21 PM"
     }
   ]
 }
