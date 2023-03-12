@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    let studentList = document.createElement('ul')
+
+    fetch('/api/v1/students', {
+        method: 'GET'
+    })
+    .then(res => res.json())
+    .then(data => {
+        data.data.map(student => {
+            //console.log(student.name)
+            let name = document.createTextNode(student.name)
+            let elem = document.createElement('li')
+            elem.appendChild(name)
+            studentList.appendChild(elem)
+        })
+
+        document.body.appendChild(studentList)
+    })
+
+    //Puedo crear una tabla HTMl con todos los datos
+</script>

@@ -1,0 +1,38 @@
+{
+  "students": [
+    {
+      "id": "100723",
+      "name": "Juliana",
+      "lastname": "Aristizabal",
+      "mail": "juliana@me.com",
+      "age": "23",
+      "genre": "F",
+      "city": "Villamaria",
+      "country": "CO",
+      "courses": [
+        "Math",
+        "Programming"
+      ],
+      "phone": "3190000000",
+      "uid": "722f3b74-eeda-407a-9e55-81949ba79ef0",
+      "created": "3/11/2023, 5:44:55 PM"
+    },
+    {
+      "id": "1234",
+      "name": "Brandon",
+      "lastname": "Cortes",
+      "mail": "brandon@me.com",
+      "age": "27",
+      "genre": "M",
+      "city": "Villamaria",
+      "country": "CO",
+      "courses": [
+        "Math",
+        "Programming"
+      ],
+      "phone": "3190000000",
+      "uid": "751f3b74-eeda-407a-9e55-85649ba79ef0",
+      "created": "3/11/2023, 4:34:55 PM"
+    }
+  ]
+}
