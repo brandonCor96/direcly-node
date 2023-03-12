@@ -49,20 +49,8 @@ const createNewStudent = (req, res) => {
     }
 };
 
-const updateOneStudent = (req, res) => {
-    const updateStudent = studentService.updateOnewStudent(req.params.studentId);
-    res.send(`Update student ${req.params.studentId}`);
-};
-
-const deleteteOneStudent = (req, res) => {
-    const deleteteStudent = studentService.deleteteOnewStudent(req.params.studentId);
-    res.send(`Delete student ${req.params.studentId}`);
-};
-
 module.exports = {
     getAllStudents,
     getOneStudent,
     createNewStudent,
-    updateOneStudent,
-    deleteteOneStudent
 };

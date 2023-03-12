@@ -19,17 +19,9 @@ const createNewStudent = (newStudent) => {
     
     return createdStudent;
 };
-const updateOneStudent = () => {
-    return;
-};
-const deleteteOneStudent = () => {
-    return;
-};
 
 module.exports = {
     getAllStudents,
     getOneStudent,
     createNewStudent,
-    updateOneStudent,
-    deleteteOneStudent
 };
