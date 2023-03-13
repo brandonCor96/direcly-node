@@ -13,7 +13,7 @@ docker ps
 ```
 
 ## Visit the page:
-> By default used Port is 3000
+> By default used Port is 3000<br>
 You can visit the app browsing at http://localhost:3000.<br>
 The front pages are:<br>
  - http://localhost:3000/register<br>
