@@ -1,6 +1,7 @@
 # direcly-node APP
 
 ## How to run the app with Docker:
+```bash
 #Create the image with node
 docker build . -t direcly-node
 
@@ -9,9 +10,10 @@ docker run -p 3000:3000 -d direcly-node
 
 #After that the app runs on the port 3000. To check it: 
 docker ps
+```
 
 ## Visit the page:
-#By default used Port is 3000
+> By default used Port is 3000
 You can visit the app browsing at http://localhost:3000.<br>
 The front pages are:<br>
  - http://localhost:3000/register<br>
