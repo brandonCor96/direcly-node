@@ -1,9 +1,9 @@
 const studentService = require("../services/studentService");
 
-const getAllStudents = (req, res) => {
-  const { mode } = req.query;
+const getAllStudents = async (req, res) => {
+  //const { mode } = req.query;
   try {
-    const allStudents = studentService.getAllStudents({ mode });
+    const allStudents = await studentService.getAllStudents();
     res.send({ status: "OK", data: allStudents });
   } catch (error) {
     res
@@ -12,7 +12,7 @@ const getAllStudents = (req, res) => {
   }  
 };
 
-const getOneStudent = (req, res) => {
+const getOneStudent = async (req, res) => {
   const {
     params: { studentId },
   } = req;
@@ -26,7 +26,7 @@ const getOneStudent = (req, res) => {
   }
 
   try {
-    const student = studentService.getOneStudent(studentId);
+    const student = await studentService.getOneStudent(studentId);
     res.send({ status: "OK", data: student });
   } catch (error) {
     res

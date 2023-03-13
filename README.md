@@ -43,3 +43,6 @@ Note: I know Basic Auth is also used is sent in the Headers, but in this case is
 ## Authors
 
 - [@brandonCor96](https://github.com/brandonCor96)
+
+## Note:
+db/ folder was used just as a test. In order to create a non-real database.
