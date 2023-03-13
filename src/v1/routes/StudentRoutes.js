@@ -1,4 +1,5 @@
 const express = require("express");
+const authMiddleware = require("../../middleware/basicAuth");
 const router = express.Router();
 const {
   getAllStudents,
@@ -7,8 +8,8 @@ const {
 } = require("../../controllers/studentController");
 
 router
-  .get("/", getAllStudents)
-  .get("/:studentId", getOneStudent)
-  .post("/", createNewStudent);
+  .get("/", authMiddleware, getAllStudents)
+  .get("/:studentId", authMiddleware, getOneStudent)
+  .post("/", authMiddleware, createNewStudent);
 
 module.exports = router;

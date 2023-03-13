@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
 const v1StudentRouter = require("./v1/routes/StudentRoutes");
+const authMiddleware = require("./middleware/basicAuth");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,7 +20,7 @@ app.use(express.static("src/public"));
 app.use("/api/v1/students", v1StudentRouter);
 
 //Creating Front pages
-app.get("/register", (req, res) => {
+app.get("/register",authMiddleware, (req, res) => {
   res.render("register", { title: "Register" });
 });
 app.get("/leads", (req, res) => {
