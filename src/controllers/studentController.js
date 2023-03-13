@@ -1,13 +1,38 @@
 const studentService = require("../services/studentService");
 
 const getAllStudents = (req, res) => {
-  const allStudents = studentService.getAllStudents();
-  res.send({ status: "OK", data: allStudents, total: allStudents.length });
+  const { mode } = req.query;
+  try {
+    const allStudents = studentService.getAllStudents({ mode });
+    res.send({ status: "OK", data: allStudents });
+  } catch (error) {
+    res
+      .status(error?.status || 500)
+      .send({ status: "FAILED", data: { error: error?.message || error } });
+  }  
 };
 
 const getOneStudent = (req, res) => {
-  const student = studentService.getOneStudent(req.params.studentId);
-  res.send(`Get student ${req.params.studentId}`);
+  const {
+    params: { studentId },
+  } = req;
+
+  if (!studentId) {
+    res.status(400).send({
+      status: "FAILED",
+      data: { error: "Parameter ':studentId' can not be empty" },
+    });
+    return;
+  }
+
+  try {
+    const student = studentService.getOneStudent(studentId);
+    res.send({ status: "OK", data: student });
+  } catch (error) {
+    res
+      .status(error?.status || 500)
+      .send({ status: "FAILED", data: { error: error?.message || error } });
+  }
 };
 
 const createNewStudent = (req, res) => {
