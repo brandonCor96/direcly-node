@@ -1,6 +1,28 @@
 # direcly-node APP
 
-## Authentication
+## How to run the app with Docker:
+#Create the image with node
+docker build . -t direcly-node
+
+#Starts the container with the API image on Port 3000
+docker run -p 3000:3000 -d direcly-node
+
+#After that the app runs on the port 3000. To check it: 
+docker ps
+
+## Visit the page:
+You can visit the app browsing at http://localhost:3000.<br>
+The front pages are:<br>
+ - http://localhost:3000/register<br>
+ - http://localhost:3000/leads<br>
+
+## Endpoints:
+We have 3 endpoints:<br>
+**GET:** '/api/v1/students' #Used to get All students
+**GET:** '/api/v1/students/<studentID>' #Used to get specific Student by <studentID>
+**POST:** '/api/v1/students' #Used to create a Student
+
+## Authentication:
 This App uses 'basic-auth' in a Middlelware, all the pages including the v1 Routes requires a Basic Auth, that is gonna shown as a Promt. <br>
     Credentials are:<br>
     - **user:** 'admin'<br>
@@ -8,7 +30,7 @@ This App uses 'basic-auth' in a Middlelware, all the pages including the v1 Rout
 Note: I know Basic Auth is also used is sent in the Headers, but in this case is used to visit the page, but works if it's injected in the route. Was implemented just to show the functionality.
 
 
-## Tech Stack
+## Tech Stack:
 
 **Client:** Js
 

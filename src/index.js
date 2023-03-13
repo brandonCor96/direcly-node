@@ -4,6 +4,12 @@ const path = require("path");
 const v1StudentRouter = require("./v1/routes/StudentRoutes");
 const authMiddleware = require("./middleware/basicAuth");
 
+const dotenv = require('dotenv');
+dotenv.config({
+  path: path.resolve(__dirname, './.env')
+});
+
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -30,3 +36,5 @@ app.get("/leads", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
+
+console.log(process.env.PORT + ' port')
