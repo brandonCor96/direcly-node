@@ -1,0 +1,140 @@
+<div id="dialogMessage" class="dialog-message">
+</div>
+<form id="register" class="form-register" method="post">
+    <input class="field-input" type="text" name="name" value="" placeholder="Your name" required>
+    <br><br>
+    <input class="field-input" type="text" name="lastname" value="" placeholder="Your Last name" required>
+    <br><br>
+    <input class="field-input" type="text" name="id" value="" placeholder="Your ID" required>
+    <br><br>
+    <input class="field-input" type="number" name="age" id="age" min="1" max="120" step="1" placeholder="Your age" required>
+    <br><br>
+    <label for="genre">Choose a Genre:</label>
+    <select id="genre" name="genre" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+    </select>
+    <br><br>
+    <label for="country">Choose a Country:</label>
+    <select id="country" name="country" required>
+        <option value="CO">Colombia</option>
+        <option value="CR">Costa Rica</option>
+    </select>    
+    <br><br>
+    <label for="city">Choose a City:</label>
+    <br>
+    <select id="city" name="city" required>
+        <option value="bogota">Bogotá</option>
+        <option value="manizales">Manizales</option>
+        <option value="sanjose">San José</option>
+    </select>
+    <br><br>
+    <input class="field-input" type="email" name="email" value="" placeholder="Your email" required>
+    <br><br>
+    <input class="field-input" type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="Your phone number" required>
+    <br><br>
+    <label for="courses">Choose some interesting courses:</label>
+    <br>
+    <select id="courses" name="courses" multiple required>
+        <option value="programming">Programming</option>
+        <option value="maths">Maths</option>
+        <option value="physics">Physics</option>
+        <option value="data">Data</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Register">
+</form>
+
+<script type="text/javascript">
+    const formRegister = document.getElementById('register');
+        
+    formRegister.addEventListener('submit', event => {
+        event.preventDefault();
+
+        //Prepare values to be sent
+        const name = formRegister.elements['name'].value;
+        const lastname = formRegister.elements['lastname'].value;
+        const id = formRegister.elements['id'].value;
+        const age = formRegister.elements['age'].value;
+        const genre = formRegister.elements['genre'].value;
+        const country = formRegister.elements['country'].value;
+        const city = formRegister.elements['city'].value;
+        const email = formRegister.elements['email'].value;
+        const phone = formRegister.elements['phone'].value;
+        const courses = Array.from(formRegister.elements['courses']).filter(option => option.selected).map(option => option.value);
+
+        fetch('/api/v1/students', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },            
+            body: JSON.stringify({
+                'id': id,
+                'name': name,
+                'lastname': lastname,
+                'mail': email,
+                'age': age,
+                'genre': genre,
+                'city': city,
+                'country': country,
+                'courses': courses,
+                'phone': phone,
+            })
+        })
+        //.then(res => res.json())
+        //.then(data => console.log(data))
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+                //Move to Top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                let messageWrapper = document.querySelector('#dialogMessage');
+                let paragraph = document.createElement('p');
+                paragraph.textContent = 'Something Wrong.';
+                messageWrapper.classList.add('active');
+                paragraph.classList.add('wrong');
+                
+                messageWrapper.appendChild(paragraph);
+
+                // Set a timeout to remove the wrapper element after 5 seconds
+                setTimeout(function() {
+                    messageWrapper.removeChild(paragraph);
+                    messageWrapper.classList.remove('active');
+                }, 5000);                     
+            }
+            if(response.ok) {
+                formRegister.reset(); //Reset the form
+
+                //Move to Top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                let messageWrapper = document.querySelector('#dialogMessage');
+                let paragraph = document.createElement('p');
+                paragraph.textContent = 'Your submission was sent!';
+                messageWrapper.classList.add('active');
+
+                messageWrapper.appendChild(paragraph);
+
+                // Set a timeout to remove the wrapper element after 5 seconds
+                setTimeout(function() {
+                    messageWrapper.removeChild(paragraph);
+                    messageWrapper.classList.remove('active');
+                }, 5000);                            
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);                 
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });        
+    })
+</script>

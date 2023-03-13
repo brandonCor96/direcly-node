@@ -1,0 +1,183 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+body h1 {
+  text-align: center;
+}
+
+.form-register {
+  max-width: 400px; /* or any other width you prefer */
+  margin: 0 auto; /* this centers the element horizontally */
+  margin-bottom: 70px;
+}
+.form-register label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.form-register .field-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+}
+.form-register .form-group {
+  margin-bottom: 10px;
+}
+.form-register .form-error {
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.form-register button,
+.form-register input[type=submit] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.form-register button:hover,
+.form-register input[type=submit]:hover {
+  background-color: #0062cc;
+}
+.form-register select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-register select:focus {
+  border-color: #007bff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-register select::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.leads-page {
+  margin-bottom: 70px;
+}
+.leads-page table {
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1256px;
+}
+.leads-page th, .leads-page td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.leads-page th {
+  background-color: #f2f2f2;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  height: 50px;
+}
+.header nav ul li {
+  margin: 0 10px;
+}
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  border-radius: 5px;
+}
+.header nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.social-media li:first-child {
+  margin-left: 0;
+}
+
+.social-media a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #0077b5;
+  border-radius: 50%;
+}
+
+.fa-linkedin-in {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.dialog-message {
+  display: none !important;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.dialog-message p {
+  font-size: 1rem;
+  color: #39aa39;
+}
+.dialog-message .wrong {
+  color: red;
+}
+.dialog-message.active {
+  display: block !important;
+}/*# sourceMappingURL=styles.css.map */
