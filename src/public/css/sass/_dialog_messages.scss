@@ -1,4 +1,5 @@
 .dialog-message {
+    display: none !important;
     padding: 1rem;
     background-color: $light-gray;
     border: 1px solid $secondary-color;
@@ -6,9 +7,16 @@
     display: flex;
     margin-bottom: 10px;
     justify-content: center;
+    text-align: center;
 
     p {
         font-size: 1rem;
         color: $green-status;
+    }
+    .wrong {
+        color: $red;
+    }
+    &.active {
+        display: block !important;
     }
 }

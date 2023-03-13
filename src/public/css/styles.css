@@ -68,6 +68,9 @@ body h1 {
   border: 0;
 }
 
+.leads-page {
+  margin-bottom: 70px;
+}
 .leads-page table {
   margin: 0 auto;
   text-align: center;
@@ -158,6 +161,7 @@ body h1 {
 }
 
 .dialog-message {
+  display: none !important;
   padding: 1rem;
   background-color: #f0f0f0;
   border: 1px solid #6c757d;
@@ -165,8 +169,15 @@ body h1 {
   display: flex;
   margin-bottom: 10px;
   justify-content: center;
+  text-align: center;
 }
 .dialog-message p {
   font-size: 1rem;
   color: #39aa39;
+}
+.dialog-message .wrong {
+  color: red;
+}
+.dialog-message.active {
+  display: block !important;
 }/*# sourceMappingURL=styles.css.map */

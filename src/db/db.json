@@ -136,6 +136,70 @@
       "phone": "3000000000",
       "uid": "343ca561-8bda-4387-b448-d90f610f3d10",
       "created": "3/12/2023, 8:51:58 PM"
+    },
+    {
+      "id": "100455733",
+      "name": "Juan",
+      "lastname": "Grajales",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "34",
+      "genre": "male",
+      "city": "bogota",
+      "country": "CR",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3194380587",
+      "uid": "778d3983-5beb-4c86-a635-26deb5cf6568",
+      "created": "3/12/2023, 9:06:33 PM"
+    },
+    {
+      "id": "34343",
+      "name": "asdasd",
+      "lastname": "asdasd",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "33",
+      "genre": "female",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3194380587",
+      "uid": "52b9eb9d-75ca-4371-81fc-3f88152c63a7",
+      "created": "3/12/2023, 9:33:39 PM"
+    },
+    {
+      "id": "6666",
+      "name": "asdasdasd",
+      "lastname": "asdasdasd",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "44",
+      "genre": "female",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3194380587",
+      "uid": "64acdacd-210e-4341-83d6-baaee1aec3ff",
+      "created": "3/12/2023, 9:37:28 PM"
+    },
+    {
+      "id": "444433",
+      "name": "sada",
+      "lastname": "asdads",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "33",
+      "genre": "male",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "data"
+      ],
+      "phone": "3194380587",
+      "uid": "7b5f70b3-4fc5-4746-923a-f26fe513ff61",
+      "created": "3/12/2023, 9:49:22 PM"
     }
   ]
 }
