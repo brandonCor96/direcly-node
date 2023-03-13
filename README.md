@@ -11,6 +11,7 @@ docker run -p 3000:3000 -d direcly-node
 docker ps
 
 ## Visit the page:
+#By default used Port is 3000
 You can visit the app browsing at http://localhost:3000.<br>
 The front pages are:<br>
  - http://localhost:3000/register<br>
@@ -18,8 +19,9 @@ The front pages are:<br>
 
 ## Endpoints:
 We have 3 endpoints:<br>
-**GET:** '/api/v1/students' #Used to get All students
-**GET:** '/api/v1/students/<studentID>' #Used to get specific Student by <studentID>
+<br>
+**GET:** '/api/v1/students' #Used to get All students<br>
+**GET:** '/api/v1/students/<studentID>' #Used to get specific Student by <studentID><br>
 **POST:** '/api/v1/students' #Used to create a Student
 
 ## Authentication:
