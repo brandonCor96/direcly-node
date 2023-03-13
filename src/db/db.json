@@ -87,6 +87,55 @@
       "phone": "3194380587",
       "uid": "a07fdefd-e158-4e0c-84ba-94340d274b6c",
       "created": "3/12/2023, 6:21:21 PM"
+    },
+    {
+      "id": "3939393",
+      "name": "Pedro",
+      "lastname": "Grajales",
+      "mail": "brandongrajales96@gmail.com",
+      "age": "56",
+      "genre": "male",
+      "city": "manizales",
+      "country": "CO",
+      "courses": [
+        "programming",
+        "maths"
+      ],
+      "phone": "3194380587",
+      "uid": "ceec9595-a5cb-408c-91be-d6fd2ecab09f",
+      "created": "3/12/2023, 8:39:22 PM"
+    },
+    {
+      "id": "43555",
+      "name": "Samuel",
+      "lastname": "Pineda",
+      "mail": "lorem@lorem.com",
+      "age": "5",
+      "genre": "male",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3449990987",
+      "uid": "91a4c33f-3f28-4cc2-afce-2f2cdd5dad38",
+      "created": "3/12/2023, 8:43:59 PM"
+    },
+    {
+      "id": "9883",
+      "name": "Dora",
+      "lastname": "Jimenes",
+      "mail": "lorem1@lorem.com",
+      "age": "48",
+      "genre": "female",
+      "city": "bogota",
+      "country": "CO",
+      "courses": [
+        "physics"
+      ],
+      "phone": "3000000000",
+      "uid": "343ca561-8bda-4387-b448-d90f610f3d10",
+      "created": "3/12/2023, 8:51:58 PM"
     }
   ]
 }

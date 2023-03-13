@@ -155,4 +155,18 @@ body h1 {
 .fa-linkedin-in {
   font-size: 18px;
   vertical-align: middle;
+}
+
+.dialog-message {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.dialog-message p {
+  font-size: 1rem;
+  color: #39aa39;
 }/*# sourceMappingURL=styles.css.map */

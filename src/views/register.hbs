@@ -1,3 +1,5 @@
+<div id="dialogMessage" class="dialog-message">
+</div>
 <form id="register" class="form-register" method="post">
     <input class="field-input" type="text" name="name" value="" placeholder="Your name" required>
     <br><br>
@@ -85,10 +87,33 @@
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
+            if(response.ok) {
+                formRegister.reset(); //Reset the form
+
+                //Move to Top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                let messageWrapper = document.querySelector('#dialogMessage');
+                const paragraph = document.createElement('p');
+                paragraph.textContent = 'Your submission was sent!';
+
+                messageWrapper.appendChild(paragraph);
+
+                // Add the wrapper element to the DOM
+                document.body.appendChild(wrapper);
+
+                // Set a timeout to remove the wrapper element after 5 seconds
+                setTimeout(function() {
+                    messageWrapper.removeChild(paragraph);
+                }, 5000);                            
+            }
             return response.json();
         })
         .then(data => {
-            console.log('Success:', data);
+            console.log('Success:', data);                 
         })
         .catch(error => {
             console.error('Error:', error);

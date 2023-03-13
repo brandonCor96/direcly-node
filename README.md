@@ -1,6 +1,6 @@
-## direcly-node
+# direcly-node APP
 
-# Authentication
+## Authentication
 This App uses 'basic-auth' in a Middlelware, all the pages including the v1 Routes requires a Basic Auth, that is gonna shown as a Promt. <br>
     Credentials are:<br>
     - **user:** 'admin'<br>
@@ -13,3 +13,7 @@ Note: I know Basic Auth is also used is sent in the Headers, but in this case is
 **Client:** Js
 
 **Server:** Node, Express
+
+## Authors
+
+- [@brandonCor96](https://github.com/brandonCor96)

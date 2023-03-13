@@ -1,0 +1,14 @@
+.dialog-message {
+    padding: 1rem;
+    background-color: $light-gray;
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+
+    p {
+        font-size: 1rem;
+        color: $green-status;
+    }
+}
